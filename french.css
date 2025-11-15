@@ -1,0 +1,195 @@
+/* Import Google Font for the titles' script style */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    background-color: #050404; /* Dark gray background */
+    color: white; /* Default text color */
+    font-family: sans-serif; /* General readable font */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    line-height: 1.4;
+}
+
+.menu-container {
+    width: 100%;
+    max-width: 750px; /* Constrain the width */
+    padding: 10px 20px;
+    background-color: #020202; /* Slightly lighter inner background for contrast */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Shared Title Styling --- */
+.main-title, .section-title, .falooda-title {
+    font-family: 'Dancing Script', cursive; /* Fancy font for titles */
+    color: #ffd700; /* Gold/Yellow color */
+    margin: 0;
+    line-height: 1;
+}
+
+.main-title {
+    font-size: 4.5em; /* Large size for French Fries */
+}
+
+.section-title, .falooda-title {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+/* --- French Fries Section --- */
+.fries-section {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.air-fryer-tag {
+    /* Style for the Air Fryer tag below the title */
+    background: linear-gradient(to right, #a0522d, #8b0000); /* Gradient red/brown */
+    color: white;
+    padding: 3px 10px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 5px;
+    border-radius: 3px;
+    position: absolute;
+    top: 50px; /* Adjust position relative to main title */
+    left: 210px;
+}
+
+.fries-list {
+    max-width: 400px; /* Keep the list narrow like in the image */
+    font-size: 1.3em;
+    padding-top: 15px;
+}
+
+.fries-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.fries-name {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.fries-price {
+    font-weight: bold;
+    color: #ffd700;
+    white-space: nowrap;
+    min-width: 50px;
+    text-align: right;
+}
+
+.fries-image-placeholder {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 350px; /* Adjust size and position */
+    z-index: 1; /* Keep the image above the Mayonnaise tag text */
+}
+
+.fries-image {
+    width: 70%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.mayonnaise-tag {
+    /* Red tag for mayonnaise price */
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+    background-color: #b22222; /* Firebrick red */
+    color: white;
+    padding: 5px 12px;
+    font-weight: bold;
+    border-radius: 3px;
+    font-size: 1.1em;
+    z-index: 2;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #555, rgba(0, 0, 0, 0));
+    margin: 40px 0;
+}
+
+/* --- Drinks Section (Milkshake, Mastani, Falooda) --- */
+
+/* Grid for Milkshake and Mastani columns */
+.shakes-mastani-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.column {
+    /* Ensures items align nicely within columns */
+    padding-right: 10px;
+}
+
+/* Item row styles shared by all drinks */
+.item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+.item-name {
+    flex-grow: 1;
+    margin-right: 5px;
+}
+
+/* MUST TRY tag styling */
+.must-try {
+    background-color: #ffd700;
+    color: black;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+/* --- Falooda Section --- */
+.falooda-container {
+    position: relative;
+    padding-top: 20px;
+}
+
+.falooda-title {
+    text-align: center;
+    margin-top: 0;
+}
+
+.falooda-list {
+    max-width: 300px;
+    margin: 0 auto; /* Center the list under the title */
+    font-size: 1.2em;
+}
+
+/* Image to replicate the visual element from the source */
+.falooda-image-placeholder {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.falooda-image-main {
+    max-width: 90%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+}

@@ -1,0 +1,121 @@
+/* Import Google Font for the title's script style */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+    background-color: #0d0606; /* Dark gray background */
+    color: white; /* Default text color */
+    font-family: sans-serif; /* General readable font */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-container {
+    width: 100%;
+    max-width: 600px; /* Constrain the width for a menu board look */
+    padding: 10px;
+}
+
+/* --- Header Styling --- */
+header {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #555;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive; /* Use the fancy font */
+    font-size: 5em; /* Large script size */
+    color: #ffd700; /* Gold/Yellow color for the title */
+    text-align: left;
+    margin: 0;
+    line-height: 1;
+}
+
+.subtitle {
+    font-family: sans-serif;
+    font-size: 0.3em; /* Smaller size relative to the main title */
+    font-weight: normal;
+    color: white;
+}
+
+.air-fryer-tag {
+    /* Style for the red/maroon box below the title */
+    background: linear-gradient(to right, #a0522d, #8b0000); /* Gradient red/brown */
+    color: white;
+    padding: 3px 10px;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-left: 5px; /* Slight offset */
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.fried-label {
+    /* "Fried" label in the top right */
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+/* --- Menu List Styling --- */
+.menu-list {
+    font-size: 1.3em;
+}
+
+.image-placeholder {
+    /* Container for the central image */
+    text-align: center;
+    margin: 20px 0;
+}
+
+.menu-image {
+    /* To visually integrate the image from the source */
+    width: 80%; /* Adjust size as needed */
+    max-width: 350px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.item-row {
+    /* Use flexbox to align the item name and price horizontally */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #555; /* Subtle separator */
+}
+
+.item-name {
+    flex-grow: 1; /* Allows the name to take up available space */
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffd700; /* Yellow/Gold price color */
+    white-space: nowrap; /* Prevents price from wrapping */
+    min-width: 60px; /* Ensure prices align neatly */
+    text-align: right;
+}
+
+.must-try {
+    /* Style for the 'MUST TRY' tag */
+    background-color: #ffd700; /* Yellow background */
+    color: black;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 10px;
+    white-space: nowrap;
+    line-height: 1; /* Keep text contained */
+}

@@ -1,0 +1,174 @@
+/* Custom Properties for Colors */
+:root {
+    --bg-color: #070707; /* Dark, nearly black background */
+    --text-color-light: #ffffff;
+    --text-color-gold: #ffcc66; /* Gold/yellow for titles */
+    --highlight-veg: #ff5555; /* Red/Pink for veg highlight */
+    --highlight-nonveg: #993399; /* Purple for non-veg highlight (or similar to veg) */
+    --price-color: #f7b731; /* Bright yellow for prices */
+    --main-font: 'Roboto', sans-serif;
+    --title-font: 'Playfair Display', serif;
+}
+
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    /* Simulate the textured background from the photo */
+    
+    /* Replace with a real dark texture image */
+    
+    font-family: var(--main-font);
+    color: var(--text-color-light);
+    min-height: 50vh;
+   display: flex;
+   justify-content: center;
+
+    
+}
+
+.menu-page {
+    width: 100%;
+    max-width: 600px; /* Constrain width for a booklet feel */
+    padding: 20px 20px 150px; /* Extra padding at bottom for the overlay image */
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Inner shadow for a booklet look */
+}
+
+/* --- Header and Title --- */
+.menu-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-title {
+    font-family: var(--title-font);
+    font-size: 3rem;
+    color: var(--text-color-gold);
+    /* Subtle text shadow for the glossy look */
+    text-shadow: 0 0 5px rgba(255, 165, 0, 0.7); 
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Placeholder for the top right pizza image */
+.header-pizza-image {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 120px;
+    height: 70px;
+    /* Replace with a real image! */
+    background-color: rgba(103, 45, 45, 0.1); /* Placeholder visual */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); /* Simulating the angled cut */
+    z-index: 1;
+}
+
+/* --- Menu Categories and List --- */
+.category-heading {
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 5px 0;
+    margin: 20px 0 10px;
+    letter-spacing: 1px;
+    /* Simulate the red/pink horizontal line in the photo */
+    border-bottom: 1px solid var(--highlight-veg); 
+    color: var(--highlight-veg);
+}
+
+.nonveg-highlight {
+    color: var(--highlight-nonveg);
+    border-bottom: 1px solid var(--highlight-nonveg);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Item Styling */
+.menu-item {
+    display: grid;
+    /* Defines the grid: Name/Desc takes 80% width, Price takes 20% */
+    grid-template-columns: 4fr 1fr; 
+    gap: 5px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Pizza Name (dt) */
+.menu-item dt {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-color-light);
+}
+
+/* Pizza Description (dd) */
+.item-desc {
+    grid-column: 1 / 2; /* Span the description across the first column */
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin-left: 0;
+}
+
+/* Price (dd) */
+.item-price {
+    grid-column: 2 / 3; /* Always in the second column */
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: right;
+    color: var(--price-color);
+    margin-left: 0;
+}
+
+/* Special Badge Styling (MUST TRY) */
+.badge {
+    background-color: var(--price-color);
+    color: var(--bg-color);
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/* --- Crust Options --- */
+.crust-options {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: relative;
+    z-index: 5;
+}
+
+.crust-title {
+    font-family: var(--title-font);
+    font-size: 1.3rem;
+    color: var(--text-color-gold);
+    margin-bottom: 10px;
+}
+
+.crust-list .menu-item {
+    border-bottom: none;
+}
+
+/* --- Bottom Image Overlay --- */
+.bottom-pizza-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    /* Replace with your actual pizza image that includes the counter/utensils */
+    "background image:
+        linear-gradient(to top, var(--bg-color) 0%, transparent 40%), /* Fading from bottom */
+        url('pizza.jpg') center bottom / cover no-repeat";
+    background-color: rgba(132, 115, 20, 0.2); /* Placeholder visual */
+    z-index: 0; /* Ensures it sits behind the text content */
+    pointer-events: none;
+}

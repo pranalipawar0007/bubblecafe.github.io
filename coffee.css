@@ -1,0 +1,134 @@
+/* Basic Reset and Setup */
+body {
+    margin: 0;
+    padding: 0;
+    /* Dark background from the image */
+    background-color: #070505ff; 
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif; /* A clean, readable font */
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align content to the top */
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+.menu-container {
+    width: 90%;
+    max-width: 500px; /* Constrain width for a menu look */
+    /* Simulating a page-like container */
+    padding: 20px;
+    background: radial-gradient(#030303, #1a0f0f); /* Subtle gradient/texture */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden; /* To contain absolute positioning */
+}
+
+/* Headings and Titles */
+.section-title {
+    font-family: 'Tangerine', cursive; /* Script/Cursive font for the title */
+    font-size: 3.5em;
+    color: #ffcc00; /* Gold/Yellow color */
+    text-align: center;
+    margin: 0.5em 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    letter-spacing: 2px;
+}
+
+/* Menu Item List Styling */
+.menu-item-list {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    font-size: 1.1em;
+}
+
+.item-name {
+    flex-grow: 1;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffcc00; /* Price color */
+    white-space: nowrap;
+    margin-left: 15px;
+}
+
+.must-try {
+    background-color: #ffcc00;
+    color: #1a0f0f;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 3px;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+/* Image Placement (Approximation) */
+.image-placeholder {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none; /* Allows text selection underneath */
+}
+
+.hot-image {
+    top: 300px; /* Position the top image */
+    right: 130px;
+    width: 200px; /* Placeholder size for the image area */
+    height: 100px;
+    /* Background to simulate the image area (replace with actual image) */
+    background: url('cold.jpg') no-repeat center center/cover; 
+    opacity: 0.7; /* Optional: adjust for blend */
+}
+
+.cold-image {
+    bottom: 110px; /* Position the bottom image */
+    right: -50px; 
+    width: 100px;
+    height: 100px;
+    /* Background to simulate the image area (replace with actual image) */
+    background: url('OIP\\(4\).jpeg') no-repeat center center/cover;
+    opacity: 0.8;
+    transform: rotate(5deg);
+}
+
+.beverages-section {
+    position: relative;
+    z-index: 2; /* Keep text above the images */
+}
+
+
+/* Special Offer Footer Bubble */
+.special-offer {
+    position: absolute;
+    bottom: 1px;
+    right: 20px;
+    background-color: #66167e; /* Blue bubble color */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; /* Bubble shape approximation */
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: rotate(-5deg); /* Slight rotation */
+}
+
+.special-offer p {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.special-offer .big-text {
+    font-size: 1.2em;
+    color: #ffcc00;
+}

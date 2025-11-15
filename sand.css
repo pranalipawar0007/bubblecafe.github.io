@@ -1,0 +1,145 @@
+/* General Reset and Body Styling */
+body {
+    background-color: #050506ff; /* Dark blue/purple background */
+    color: #ffffff; /* White text for contrast */
+    font-family: Arial, sans-serif; /* Fallback for general text */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Main Menu Container */
+.menu-container {
+    width: 100%;
+    max-width: 600px; /* Constrain width for a menu-like feel */
+    padding: 20px;
+    position: relative; /* For image positioning */
+}
+
+/* Main Title - "Sandwich" */
+.main-title {
+    font-family: 'Times New Roman', serif; /* Use a classic serif for the script-like feel */
+    font-size: 3.5em;
+    color: #ffcc00; /* Yellow/Gold color */
+    text-align: center;
+    margin-bottom: 20px;
+    /* Basic text shadow to simulate the glowing/script effect */
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.5);
+}
+
+/* Section Title - "A Delight for..." */
+.section-delight-title {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #f08080; /* Light pink/coral color */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual Menu Item */
+.menu-item {
+    display: flex;
+    justify-content: space-between; /* Puts name on left, price on right */
+    align-items: center;
+    padding: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.4;
+}
+
+.item-name {
+    flex-grow: 1;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #ffd700; /* Gold color for price */
+    margin-left: 15px;
+    min-width: 50px; /* Ensures prices align somewhat */
+    text-align: right;
+}
+
+/* Must Try Tag Styling */
+.must-try {
+    position: relative;
+    /* Adjusting layout for the tag */
+}
+
+.item-tag {
+    background-color: #f7a048; /* Orange-ish color */
+    color: #000000;
+    font-size: 0.7em;
+    font-weight: bold;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    /* Positioning the tag next to the price/name area */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Grill Option Box */
+.grill-option-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 8px 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    margin: 30px auto 0 auto;
+    width: fit-content;
+}
+
+/* Sandwich Image Placeholder Styling */
+/* This simulates the area the image occupies for a better layout approximation */
+.sandwich-image-placeholder {
+    position: absolute;
+    top: 80px; /* Adjust as needed */
+    right: 0; /* Adjust as needed */
+    width: 250px;
+    height: 300px;
+    /* Optional: visual clue for the placeholder */
+    background: repeating-linear-gradient(
+        45deg,
+        #1c1c1c,
+        #1c1c1c 10px,
+        #2a2a2a 10px,
+        #2a2a2a 20px
+    );
+    border: 3px solid #ffcc00;
+    border-radius: 5px;
+    opacity: 0.7;
+    z-index: 1; /* Keep it behind the text where necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+/* Media Query for smaller screens to move the placeholder */
+@media screen {
+    
+} (max-width: 768px) {
+    .sandwich--placeholder {
+        position: static; /* Move placeholder below content */
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+    }
+}
